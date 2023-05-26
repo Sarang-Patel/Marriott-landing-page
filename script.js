@@ -2,6 +2,8 @@ const hamburger_menu = document.getElementById("hamburger-menu")
 const hamburger_close = document.getElementById("hamburger-close")
 const modal_section = document.getElementById("modal")
 
+
+// hamburger menu toggle using classlist
 hamburger_menu.onclick = (e)=>{
     e.preventDefault()
     modal_section.classList.toggle("hidden")

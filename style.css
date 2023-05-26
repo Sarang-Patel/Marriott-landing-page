@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-:root{
-  --fontColor:white;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+:root {
+  --fontColor: white;
 }
 
 *,
@@ -50,51 +50,92 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* nav bar styling */
 nav {
   width: 100%;
   position: absolute;
   height: 4em;
-  /* color: white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--fontColor);
   border-bottom: 1px solid var(--fontColor);
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
   z-index: 2;
 }
 
-nav a{
-    text-decoration: none;
-    color: var(--fontColor);
+nav a {
+  text-decoration: none;
+  color: var(--fontColor);
 }
 
-.modal button{
-    background-color: transparent;
-    border: none;
-    border-left: 1px solid var(--fontColor);
-    padding: 20px;
-    color: var(--fontColor);
-    z-index: 111;
+.modal button {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid var(--fontColor);
+  padding: 20px;
+  color: var(--fontColor);
+  z-index: 111;
 }
 
-.modal button:hover{
+.modal button:hover {
   background-color: white;
   color: black;
   cursor: pointer;
 }
 
-.links{
+.links {
   display: flex;
   width: 50%;
   justify-content: space-around;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
+  display: none;
+}
+#hamburger-menu {
+  display: block;
+}
+
+#hamburger-close {
   display: none;
 }
 
+.hide-for-mobile {
+  display: none;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.modal a {
+  text-decoration: none;
+  color: var(--fontColor);
+}
+
+.modal button {
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--fontColor);
+  padding: 20px;
+  color: var(--fontColor);
+}
+
+
+/* hero section styling */
 
 .hero {
   background-image: url("images/erik-mclean-jR767RMS8jY-unsplash.jpg");
@@ -112,43 +153,14 @@ nav a{
   gap: 3rem;
 }
 
-
-#hamburger-menu{
-  display:block;
-}
-
-#hamburger-close{
-  display: none;
-}
-
-.hide-for-mobile{
-  display: none;
-}
-
-.modal{
-  background-color: rgba(0, 0, 0, .6);
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  padding: 1em;
-}
-
-.selector{
+.selector {
   display: flex;
   gap: 3rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.selector button{
+.selector button {
   background: transparent;
   border: 1.4px solid white;
   padding: 1rem;
@@ -156,29 +168,16 @@ nav a{
   cursor: pointer;
 }
 
-.selector button:hover{
+.selector button:hover {
   background-color: white;
   color: black;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.modal a{
-  text-decoration: none;
-  color: var(--fontColor);
-}
-
-.modal button{
-    background-color: transparent;
-    border: none;
-    border: 1px solid var(--fontColor);
-    padding: 20px;
-    color: var(--fontColor);
-}
-
-input[type="date"]{
+input[type="date"] {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid wheat;
@@ -187,15 +186,14 @@ input[type="date"]{
   padding-bottom: 10px;
 }
 
-
-input[type="date"]::-webkit-calendar-picker-indicator{
+input[type="date"]::-webkit-calendar-picker-indicator {
   background: url("images/calendar_month_FILL0_wght400_GRAD0_opsz48.svg");
   color: white;
   background-color: wheat;
   background-size: 20px;
 }
 
-select{
+select {
   color: wheat;
   background: transparent;
   border: none;
@@ -203,33 +201,39 @@ select{
   padding-bottom: 11px;
 }
 
-select option[value="Standard"], option[value="Deluxe"], option[value="Premium Suites"], option[value="Single"],option[value="Couple"], option[value="Family/Friends"]{
+select option[value="Standard"],
+option[value="Deluxe"],
+option[value="Premium Suites"],
+option[value="Single"],
+option[value="Couple"],
+option[value="Family/Friends"] {
   color: black;
 }
 
 
-.services_heading{
+/* amenities section styling */
+.services_heading {
   padding: 1em;
   color: white;
   position: relative;
   top: 10em;
 }
 
-#services_title{
+#services_title {
   margin-bottom: 1em;
   padding-left: 1em;
 }
 
-.amenities_img{
+.amenities_img {
   position: absolute;
   top: 38em;
   z-index: -222;
-  background-color: #141414 ;
+  background-color: #141414;
   width: 100%;
   height: 870px;
 }
 
-.amenities{
+.amenities {
   top: 50em;
   right: 0;
   --rotation: 0;
@@ -241,7 +245,7 @@ select option[value="Standard"], option[value="Deluxe"], option[value="Premium S
   z-index: -1;
 }
 
-.video{
+.video {
   position: relative;
   top: -7em;
   background-color: #141414;
@@ -249,66 +253,88 @@ select option[value="Standard"], option[value="Deluxe"], option[value="Premium S
   justify-content: center;
 }
 
-.amenities a{
+.amenities a {
   text-decoration: none;
   color: white;
   width: 50px;
 }
 
+.amenities1 {
+  --rotation: 30deg;
+}
+.amenities2 {
+  --rotation: 60deg;
+}
+.amenities3 {
+  --rotation: 90deg;
+}
+.amenities4 {
+  --rotation: 120deg;
+}
+.amenities5 {
+  --rotation: 150deg;
+}
+.amenities6 {
+  --rotation: 180deg;
+}
+.amenities7 {
+  --rotation: 210deg;
+}
+.amenities8 {
+  --rotation: 240deg;
+}
+.amenities9 {
+  --rotation: 270deg;
+}
+.amenities10 {
+  --rotation: 300deg;
+}
+.amenities11 {
+  --rotation: 330deg;
+}
 
-.amenities1{--rotation:30deg;}
-.amenities2{--rotation:60deg;}
-.amenities3{--rotation:90deg;}
-.amenities4{--rotation:120deg;}
-.amenities5{--rotation:150deg;}
-.amenities6{--rotation:180deg;}
-.amenities7{--rotation:210deg;}
-.amenities8{--rotation:240deg;}
-.amenities9{--rotation:270deg;}
-.amenities10{--rotation:300deg;}
-.amenities11{--rotation:330deg;}
 
-
-.Room_details{
+/* Room type section styling */
+.Room_details {
   background-color: rgb(20, 20, 20, 0.3);
   padding: 2em;
 }
 
-.Room_details h2 , p{
+.Room_details h2,
+p {
   padding-left: 1em;
 }
 
-.Room_details h2{
+.Room_details h2 {
   padding-top: 1em;
 }
 
-.cards{
+.cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: .1em;
+  gap: 0.1em;
 }
 
-.Card{
+.Card {
   min-width: 25%;
   max-width: 40%;
   margin-top: 5em;
   border-radius: 1em;
   overflow: hidden;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
 
-.Card:hover{
+.Card:hover {
   transform: scale(1.1);
-
 }
 
-.cardImage{
+.cardImage {
   border-radius: 1em;
   overflow: hidden;
 }
 
-.cardInfo{
+.cardInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -317,14 +343,14 @@ select option[value="Standard"], option[value="Deluxe"], option[value="Premium S
   position: relative;
   top: -10em;
   left: 1em;
-  gap: .5em;
+  gap: 0.5em;
 }
 
-#amenities_heading{
+#amenities_heading {
   position: relative;
 }
 
-.cardInfo button{
+.cardInfo button {
   background-color: transparent;
   border: 1.5px solid white;
   color: white;
@@ -334,12 +360,12 @@ select option[value="Standard"], option[value="Deluxe"], option[value="Premium S
   cursor: pointer;
 }
 
-.cardInfo button:hover{
+.cardInfo button:hover {
   background-color: white;
   color: black;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -348,64 +374,63 @@ select option[value="Standard"], option[value="Deluxe"], option[value="Premium S
   background-color: hsl(233, 26%, 24%);
 }
 
-.container:last-child{
+.container:last-child {
   align-items: end;
 }
 
-.col1, .col2{
+.col1,
+.col2 {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.logo_icons{
+.logo_icons {
   display: flex;
   flex-direction: column;
   gap: 3em;
 }
 
-.social_icons{
+.social_icons {
   display: flex;
   justify-content: space-around;
 }
 
-.footer__copyright{
+.footer__copyright {
   color: hsl(233, 8%, 62%);
 }
 
-.container a{
+.container a {
   text-decoration: none;
   color: white;
 }
 
-@media (max-width:600px){
-  
 
-
-  .container{
+/* media queries to handle diff screen sizes */
+@media (max-width: 600px) {
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .col1, .col2{
+  .col1,
+  .col2 {
     align-items: center;
   }
 
-  .container:last-child{
+  .container:last-child {
     align-items: center;
   }
-  
 }
 
-@media (max-width:800px){
-
-  .services_heading{
+@media (max-width: 800px) {
+  .services_heading {
     top: 1em;
   }
 
-  .hotel_amenities{
+  .hotel_amenities {
     display: flex;
     justify-content: center;
     gap: 10em;
@@ -414,29 +439,30 @@ select option[value="Standard"], option[value="Deluxe"], option[value="Premium S
     height: 0em;
   }
 
-  .cards{
+  .cards {
     display: flex;
     flex-direction: column;
     min-width: 100%;
     height: auto;
   }
 
-  .Card{
+  .Card {
     max-width: 100%;
     padding: 1em;
   }
-  
-  .Room_details{
+
+  .Room_details {
     padding: 0;
   }
 
-  .amenities{
+  .amenities {
     position: relative;
     transform: none;
     top: 2em;
     height: 6em;
   }
-  .amenityCol2, .amenityCol1{
+  .amenityCol2,
+  .amenityCol1 {
     transform: none;
   }
 }
