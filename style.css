@@ -259,38 +259,84 @@ option[value="Family/Friends"] {
   width: 50px;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(var(--rotation));
+  }
+  100% {
+    transform: rotate(var(--stop));
+  }
+}
+
 .amenities1 {
   --rotation: 30deg;
+  --stop:390deg;
+  animation: rotate 12s infinite linear;
 }
 .amenities2 {
   --rotation: 60deg;
+  --stop:420deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities3 {
   --rotation: 90deg;
+  --stop:450deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities4 {
   --rotation: 120deg;
+  --stop:480deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities5 {
   --rotation: 150deg;
+  --stop:510deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities6 {
   --rotation: 180deg;
+  --stop:540deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities7 {
   --rotation: 210deg;
+  --stop:570deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities8 {
   --rotation: 240deg;
+  --stop:600deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities9 {
   --rotation: 270deg;
+  --stop:630deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities10 {
   --rotation: 300deg;
+  --stop:660deg;
+  animation: rotate 12s infinite linear;
+
 }
 .amenities11 {
   --rotation: 330deg;
+  --stop:690deg;
+  animation: rotate 12s infinite linear
+}
+
+.amenities12{
+  --rotation: 0deg;
+  --stop:360deg;
+  animation: rotate 12s infinite linear
 }
 
 
@@ -327,6 +373,11 @@ p {
 
 .Card:hover {
   transform: scale(1.1);
+}
+
+.Card img:hover{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .cardImage {
